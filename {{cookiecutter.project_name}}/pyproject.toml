@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "{{ cookiecutter.module_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_short_description }}"
+authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
+{% if cookiecutter.open_source_license != 'Not open source' -%}
+license = "{{ cookiecutter.open_source_license }}"
+{% endif %}
+readme = "README.md"
+packages = [
+    { include = "{{ cookiecutter.module_name }}" },
+]
+
+[tool.poetry.dependencies]
+python = "{{ cookiecutter.python_version }}"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+isort = "^5.7.0"
+mypy = "^0.812"
+pre-commit = "^2.11.1"
+flake8 = "^3.8.4"
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["setuptools", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

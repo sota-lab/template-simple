@@ -1,0 +1,11 @@
+{
+  "full_name": "Ming Yang",
+  "email": "ymviv@qq.com",
+
+  "project_name": "sotalab-simple",
+  "module_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_short_description": "sotalab template: simple",
+  "open_source_license": ["Not open source", "MIT", "BSD", "ISC", "Apache Software License 2.0", "GNU General Public License v3"],
+
+  "python_version": "^3.8"
+}

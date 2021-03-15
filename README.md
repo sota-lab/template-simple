@@ -1,0 +1,1 @@
+# SotaLab Template: Simple
